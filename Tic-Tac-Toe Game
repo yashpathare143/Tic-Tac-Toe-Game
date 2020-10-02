@@ -1,6 +1,5 @@
 # --------- Global Variables -----------
 
-
 # Will hold our game board data
 board = ["-", "-", "-",
          "-", "-", "-",
@@ -14,7 +13,6 @@ winner = None
 
 # Tells us who the current player is (X goes first)
 current_player = "X"
-
 
 
 # ------------- Functions ---------------
@@ -47,9 +45,9 @@ def play_game():
 # Display the game board to the screen
 def display_board():
   print("\n")
-  print(board[0] + " | " + board[1] + " | " + board[2])
-  print(board[3] + " | " + board[4] + " | " + board[5])
-  print(board[6] + " | " + board[7] + " | " + board[8])
+  print(board[0] + " | " + board[1] + " | " + board[2] + "     1 | 2 | 3")
+  print(board[3] + " | " + board[4] + " | " + board[5] + "     4 | 5 | 6")
+  print(board[6] + " | " + board[7] + " | " + board[8] + "     7 | 8 | 9")
   print("\n")
 
 
@@ -132,8 +130,6 @@ def check_rows():
     return None
 
 
-
-
 # Check the columns for a win
 def check_columns():
   # Set global variables
@@ -157,8 +153,6 @@ def check_columns():
     return None
 
 
-
-
 # Check the diagonals for a win
 def check_diagonals():
   # Set global variables
@@ -179,8 +173,6 @@ def check_diagonals():
     return None
 
 
-
-
 # Check if there is a tie
 def check_for_tie():
   # Set global variables
@@ -194,8 +186,6 @@ def check_for_tie():
     return False
 
 
-
-
 # Flip the current player from X to O, or O to X
 def flip_player():
   # Global variables we need
@@ -206,7 +196,6 @@ def flip_player():
   # Or if the current player was O, make it X
   elif current_player == "O":
     current_player = "X"
-
 
 
 # ------------ Start Execution -------------
